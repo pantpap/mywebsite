@@ -12,4 +12,8 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BlogListComponent {}
+export class BlogListComponent {
+  test(){
+    console.log('test');
+  }
+}
