@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@my-website/blog": ["libs/feature/src/index.ts"],
-      "@my-website/header": ["libs/ui/src/index.ts"]
+      "@my-website/header": ["libs/ui/src/index.ts"],
+      "@my-website/home": ["libs/feature/home/src/index.ts"],
+      "@my-website/services": ["libs/feature/services/src/index.ts"],
+      "@my-website/social-media": ["libs/ui/social-media/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
