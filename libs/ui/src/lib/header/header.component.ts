@@ -5,10 +5,18 @@ import { Drawer } from 'primeng/drawer';
 import { Avatar } from 'primeng/avatar';
 import { StyleClass } from 'primeng/styleclass';
 import { Ripple } from 'primeng/ripple';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'lib-header',
-  imports: [CommonModule, Button, Drawer, Avatar, StyleClass, Ripple],
+  imports: [
+    CommonModule,
+    Button,
+    Drawer,
+    Avatar,
+    Ripple,
+    RouterLink,
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
   standalone: true,
@@ -17,7 +25,7 @@ import { Ripple } from 'primeng/ripple';
 export class HeaderComponent {
   @ViewChild('drawerRef') drawerRef!: Drawer;
 
-  closeCallback(e: any): void {
+  closeDrawer(e: Event): void {
     this.drawerRef.close(e);
   }
 

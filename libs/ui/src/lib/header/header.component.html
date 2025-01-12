@@ -3,10 +3,9 @@
     <div class="flex flex-col h-full" style="flex-direction: column">
       <div
         class="flex items-center justify-between px-6 pt-4 shrink-0"
-        style="padding-left: 1.5rem; padding-right: 1.5rem"
       >
         <span class="inline-flex items-center gap-2">
-          <div class="mx-auto">
+          <div>
             <a
               pRipple
               class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
@@ -21,16 +20,16 @@
           </div>
         </span>
         <span>
-          <p-button
-            type="button"
-            (click)="closeCallback($event)"
-            icon="pi pi-times"
-            rounded="true"
-            outlined="true"
-            styleClass="h-8 w-8"
+<!--          <p-button-->
+<!--            type="button"-->
+<!--            (click)="closeCallback($event)"-->
+<!--            icon="pi pi-times"-->
+<!--            rounded="true"-->
+<!--            outlined="true"-->
+<!--            styleClass="h-8 w-8"-->
 
-            [style]="{background: '#dc6353', color: 'white', border: '1px solid #dc6353'}"
-          ></p-button>
+<!--            [style]="{background: '#dc6353', color: 'white', border: '1px solid #dc6353'}"-->
+<!--          ></p-button>-->
         </span>
       </div>
       <hr class="mb-4 mx-4 border-t border-0 border-surface" />
@@ -40,6 +39,8 @@
             <ul class="list-none p-0 m-0 overflow-hidden">
               <li>
                 <a
+                  [routerLink]="'/home'"
+                  (click)="closeDrawer($event)"
                   pRipple
                   class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
                 >
@@ -49,6 +50,8 @@
               </li>
               <li>
                 <a
+                  [routerLink]="'/services'"
+                  (click)="closeDrawer($event)"
                   pRipple
                   class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
                 >
@@ -58,6 +61,7 @@
               </li>
               <li>
                 <a
+                  (click)="closeDrawer($event)"
                   pRipple
                   class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
                 >
@@ -67,6 +71,8 @@
               </li>
               <li>
                 <a
+                  [routerLink]="'/blog'"
+                  (click)="closeDrawer($event)"
                   pRipple
                   class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
                 >
@@ -76,6 +82,7 @@
               </li>
               <li>
                 <a
+                  (click)="closeDrawer($event)"
                   pRipple
                   class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple"
                 >
